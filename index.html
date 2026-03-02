@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Local Menu</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="app" role="application">
+            <header class="topbar">
+                <div class="brand">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+                        <rect x="2" y="3" width="20" height="14" rx="2" fill="url(#g)" />
+                        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
+                    </svg>
+                    <div>
+                        <h1>Local Menu</h1>
+                        <p class="tagline">Fast access to local services</p>
+                    </div>
+                </div>
+
+                <form class="search" role="search" onsubmit="return false;">
+                    <label for="search" class="visually-hidden">Search in lists</label>
+                    <input class="searchbox" placeholder="Filter in lists..." id="search" aria-label="Search in lists" />
+                </form>
+            </header>
+
+            <section class="panel" aria-labelledby="apps-heading">
+                <h2 class="heading" id="apps-heading">Apps</h2>
+                <div class="grid" id="app-grid" role="list"></div>
+            </section>
+
+            <section class="panel" aria-labelledby="web-heading">
+                <h2 class="heading" id="web-heading">Webs</h2>
+                <div class="grid" id="web-grid" role="list"></div>
+            </section>
+
+            <section class="panel" aria-labelledby="game-heading">
+                <h2 class="heading" id="game-heading">Games</h2>
+                <div class="grid" id="game-grid" role="list"></div>
+            </section>
+
+            <footer>
+                Press <span class="kbd">Enter</span> to open an app, arrow keys to navigate.
+            </footer>
+        </main>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
